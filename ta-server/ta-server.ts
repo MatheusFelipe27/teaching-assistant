@@ -1,6 +1,6 @@
 import express = require('express');
 import bodyParser = require("body-parser");
-
+import { Turma } from '../common/turma';
 import {Aluno} from '../common/aluno';
 import {CadastroDeAlunos} from './cadastrodealunos'; 
 import {Turmas} from './turmas'
@@ -32,6 +32,14 @@ taserver.get('/turmas', function (req: express.Request, res: express.Response){
 //recebe um identificador de turma e de aluno e retorna uma matricula
 taserver.get('/matriculas', function (req: express.Request, res: express.Response){
 
+})
+
+taserver.get('/turma/:descricao', function (req: express.Request, res: express.Response){
+    var turmas = new Turmas();
+    let turma = new Turma();
+    turma = turmas.getTurma(req.params.descricao)
+    res.send(turma)
+    //res.send(JSON.stringify(cadastro.getAlunos()));
 })
 
 var server = taserver.listen(3000, function () {

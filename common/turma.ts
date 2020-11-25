@@ -30,12 +30,18 @@ export class Turma {
         return null;
     }
 
+    getMatriculas(): Matricula [] {
+
+        return this.matriculas;
+    }
+
     getRoteiros(): Roteiro[] {
         return [];
     }
 
     getMonitores(): Aluno[] {
-        return [];
+    
+        return this.monitores;
     }
 
     getPercentual(meta: string, conceito: string): number {
