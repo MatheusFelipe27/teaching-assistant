@@ -38,6 +38,7 @@ taserver.get('/turma/:descricao', function (req: express.Request, res: express.R
     var turmas = new Turmas();
     let turma = new Turma();
     turma = turmas.getTurma(req.params.descricao)
+    console.log(turma.monitores)
     res.send(turma)
     //res.send(JSON.stringify(cadastro.getAlunos()));
 })

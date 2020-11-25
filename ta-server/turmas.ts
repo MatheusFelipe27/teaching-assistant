@@ -48,6 +48,16 @@ export class Turmas {
             turma.matriculas.push(matricula1);
             turma.matriculas.push(matricula2);
             turma.matriculas.push(matricula3);
+            var monitor1 = new Aluno();
+            var monitor2 = new Aluno();
+            var monitor3 = new Aluno();
+            monitor1.nome = "Irmão do Gas";
+            monitor2.nome = "Juridica de PE";
+            monitor3.nome = "Pipico do santa";
+            turma.monitores.push(monitor1);
+            turma.monitores.push(monitor2);
+            turma.monitores.push(monitor3);
+
             return turma;
     
         }

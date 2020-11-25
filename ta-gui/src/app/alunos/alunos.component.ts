@@ -35,10 +35,13 @@ export class AlunosComponent implements OnInit {
     this.alunoService.getTurma(this.nomeTurma).subscribe(
 
       (a) => {
-
         this.turma = new Turma()
+        this.turma.descricao = a.descricao
+        this.matriculas = a.matriculas
+        console.log(this.matriculas)
         console.log(this.turma)
-        this.matriculas = this.turma.getMatriculas()
+        console.log(this.matriculas.length)
+  
       },
       (msg) => { alert(msg.message); }
     )

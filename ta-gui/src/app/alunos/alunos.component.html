@@ -13,6 +13,10 @@
         <td>{{a.aluno.nome}}</td>
         <td>{{a.aluno.cpf}}</td>
         <td>{{a.aluno.email}}</td>
-
+        <td><select name="monitores" id="monitores">
+         <option value="" selected disabled hidden>Selecionar Monitor</option>  
+         <option *ngFor="let b of monitores" value={{b.aluno.nome}}>{{b.aluno.nome}}</option>
+       </select></td>
+ 
      </tr>
 </table>
