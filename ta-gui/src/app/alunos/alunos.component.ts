@@ -28,6 +28,11 @@ export class AlunosComponent implements OnInit {
 
   }
 
+  adicionarMonitor(){
+    this.alunoService.postMonitor(this.nomeTurma, ).subscribe(
+
+  }
+
 
   carregarMatriculas() {
 
@@ -38,7 +43,8 @@ export class AlunosComponent implements OnInit {
         this.turma = new Turma()
         this.turma.descricao = a.descricao
         this.matriculas = a.matriculas
-        console.log(this.matriculas)
+        this.monitores = a.monitores
+        console.log(this.matriculas)        
         console.log(this.turma)
         console.log(this.matriculas.length)
   

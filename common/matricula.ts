@@ -21,6 +21,9 @@ export class Matricula{
     getMonitor(): Aluno {
         return this.monitor      
     }
+    setMonitor(monitor: Aluno){
+        this.monitor = monitor
+    }
     getRespostasDeRoteiros(): RespostaDeRoteiro[]{
         return this.respostasDeRoteiros
     }

@@ -15,8 +15,10 @@
         <td>{{a.aluno.email}}</td>
         <td><select name="monitores" id="monitores">
          <option value="" selected disabled hidden>Selecionar Monitor</option>  
-         <option *ngFor="let b of monitores" value={{b.aluno.nome}}>{{b.aluno.nome}}</option>
+         <option *ngFor="let b of monitores" value={{b.nome}}>{{b.nome}}</option>
        </select></td>
- 
+       <td><button (click)="" >Adicionar</button></td>
+
      </tr>
+     
 </table>
